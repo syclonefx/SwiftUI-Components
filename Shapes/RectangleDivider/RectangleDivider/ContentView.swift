@@ -2,7 +2,7 @@
 //  ContentView.swift
 //  RectangleDivider
 //
-//  Created by Chuck Perdue on 4/15/24.
+//  Created by syclonefx on 4/15/24.
 //
 
 import SwiftUI

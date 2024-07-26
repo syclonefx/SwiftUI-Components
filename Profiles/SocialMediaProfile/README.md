@@ -1,5 +1,7 @@
 #  SocialMediaProfile
 
+Basic profile view with social media icons for SwiftUI
+
 <picture>
 <img src="screenshot.jpg" height="500px" style="border: solid 1px black">
 </picture>
