@@ -1,4 +1,4 @@
-#  SocialMediaProfile
+##  SocialMediaProfile
 
 Basic profile view with social media icons for SwiftUI
 

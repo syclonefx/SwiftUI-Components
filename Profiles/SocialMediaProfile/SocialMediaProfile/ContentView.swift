@@ -10,7 +10,7 @@ import SwiftUI
 struct ContentView: View {
   @Environment(\.colorScheme) var colorScheme
   
-  @State private var socialAccounts = ["twitter", "facebook", "instagram", "reddit"]
+  @State private var socialAccounts = ["github", "twitter", "facebook", "instagram", "reddit"]
   
   var topColor: Color {
     if colorScheme == .dark {
