@@ -3,7 +3,10 @@
 Basic profile view with social media icons for SwiftUI
 
 <picture>
-<img src="screenshot.jpg" height="500px">
+<img src="screenshot-light.jpg" height="500px">
+</picture>
+<picture>
+<img src="screenshot-dark.jpg" height="500px">
 </picture>
 
 ### Photo Attribution

@@ -29,8 +29,10 @@ struct ProfileView: View {
         VStack(alignment: .leading) {
           Text(name)
             .font(.title2)
+            .foregroundStyle(.black)
           Text(title)
             .font(.caption)
+            .foregroundStyle(.gray)
           
           HStack {
             ForEach(socialAccounts, id: \.self) {
