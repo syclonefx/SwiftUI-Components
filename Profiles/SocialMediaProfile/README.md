@@ -1,7 +1,7 @@
 #  SocialMediaProfile
 
 <picture>
-<img src="screenshot.jpg" height="500px">
+<img src="screenshot.jpg" height="500px" style="border: solid 1px black">
 </picture>
 
 ### Photo Attribution
