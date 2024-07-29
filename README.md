@@ -4,6 +4,9 @@ A collection of various views and components I made with SwiftUI. I thought thes
 ### Avatars
 - [AvatarActiveIcon](/Avatars/AvatarActiveIcon/)
 
+### Pickers
+- [DateTimeProductPicker](/Pickers/DateTimeProductPicker/)
+
 ### User Profiles
 - [SocialMediaProfile](/Profiles/SocialMediaProfile/)
 
