@@ -9,4 +9,3 @@ A collection of various views and components I made with SwiftUI. I thought thes
 
 ### User Profiles
 - [SocialMediaProfile](/Profiles/SocialMediaProfile/)
-
