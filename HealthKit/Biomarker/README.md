@@ -1,6 +1,6 @@
 ## Biomarker
 
-Custom view for a Healthkit project that uses SwiftUI Gauge to show the progress of tracking the number of reading needed for the day.
+Custom view for a HealthKit project that uses SwiftUI Gauge to show the progress of tracking the number of reading needed for the day.
 
 <picture>
 <img src="biomarker-light.jpg" height="500px">
