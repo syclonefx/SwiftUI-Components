@@ -10,11 +10,10 @@
 import SwiftUI
 
 struct HeatMapView: View {
-  var date = Date()
-  var heatMapItems = MockData.examples(month: 8)
   let columns = [GridItem(.adaptive(minimum: 28))]
-  
   var color: Color = Color(red: 60 / 255, green: 238 / 255, blue: 73 / 255)
+  var date = Date()
+  var heatMapItems: [HeatMapItem]
   
   var title: String {
     let dateFormatter = DateFormatter()

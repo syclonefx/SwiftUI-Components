@@ -12,6 +12,7 @@ Custom view for a showing a trend heat map that uses SwiftUI Grid to show the tr
 #### Customization
 - HeatMap Item color
 
+#### Useage
 ```swift
-HeatMapView(date: Date())
+HeatMapView(date: Date(), heatMapItems: heatMapItems)
 ```

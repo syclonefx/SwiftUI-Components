@@ -10,8 +10,13 @@
 import SwiftUI
 
 struct ContentView: View {
+  var heatMapItems: [HeatMapItem] {
+    let dateComponents = Calendar.current.dateComponents([.day, .month, .year], from: Date())
+    return MockData.examples(month: dateComponents.month ?? 1)
+  }
+  
   var body: some View {
-    HeatMapView(date: Date())
+    HeatMapView(date: Date(), heatMapItems: heatMapItems)
     .padding()
   }
 }
