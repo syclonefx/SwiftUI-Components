@@ -19,7 +19,9 @@ struct ContentView: View {
       .padding()
     }
     Button("Add View") {
-      views.append(ContainerView())
+      withAnimation(.spring(.bouncy)) {
+        views.append(ContainerView())
+      }
     }
     .disabled(views.count >= 5)
   }
@@ -30,7 +32,7 @@ struct ContentView: View {
         views[0]
           .frame(width: 370, height: 370)
       case 2:
-        Grid(horizontalSpacing: 2) {
+        Grid(horizontalSpacing: 5) {
           GridRow {
             views[0]
               .frame(width: 185, height: 185)
@@ -39,12 +41,12 @@ struct ContentView: View {
           }
         }
       case 3:
-        Grid(horizontalSpacing: 2) {
+        Grid(horizontalSpacing: 5) {
           GridRow {
             views[0]
               .frame(width: 185, height: 185)
               .gridCellColumns(2)
-            Grid(horizontalSpacing: 2) {
+            Grid(horizontalSpacing: 5) {
               GridRow {
                 views[1]
                   .frame(width: 185, height: 90)
@@ -57,12 +59,12 @@ struct ContentView: View {
           }
         }
       case 4:
-        Grid(horizontalSpacing: 2) {
+        Grid(horizontalSpacing: 5) {
           GridRow {
             views[0]
             .frame(width: 185, height: 185)
             .gridCellColumns(2)
-            Grid(horizontalSpacing: 2) {
+            Grid(horizontalSpacing: 5) {
               GridRow {
                 views[1]
                   .frame(width: 185, height: 90)
@@ -78,12 +80,12 @@ struct ContentView: View {
           }
         }
       case 5:
-        Grid(horizontalSpacing: 2) {
+        Grid(horizontalSpacing: 5) {
           GridRow {
             views[0]
               .frame(width: 185, height: 185)
               .gridCellColumns(2)
-            Grid(horizontalSpacing: 2) {
+            Grid(horizontalSpacing: 5) {
               GridRow {
                 views[1]
                   .frame(width: 90, height: 90)
