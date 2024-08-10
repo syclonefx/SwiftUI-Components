@@ -15,15 +15,15 @@ struct ContentView: View {
     ScrollView {
       VStack {
         buildView()
-        
-        Button("Add View") {
-          views.append(ContainerView())
-        }
-        .disabled(views.count >= 5)
       }
       .padding()
     }
+    Button("Add View") {
+      views.append(ContainerView())
+    }
+    .disabled(views.count >= 5)
   }
+  
   @ViewBuilder func buildView() -> some View {
     switch views.count {
       case 1:
