@@ -111,7 +111,6 @@ struct ContentView: View {
 
 protocol JournalView: View {
   associatedtype Content: View
-  
   var body: ComponentView<Content> { get }
 }
 
