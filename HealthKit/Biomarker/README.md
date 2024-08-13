@@ -17,6 +17,7 @@ Custom view for a HealthKit project that uses SwiftUI Gauge to show the progress
 - Biomarker base color
 - Biomarker progress bar color
 
+#### Useage
 ```swift
 BiomarkerView(
       readingCount: readingCount,

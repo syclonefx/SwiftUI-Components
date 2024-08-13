@@ -4,6 +4,9 @@ A collection of various views and components I made with SwiftUI. I thought thes
 ### Avatars
 - [AvatarActiveIcon](/Avatars/AvatarActiveIcon/) Customizable avatar profile image with customizable activity indicator made with SwiftUI
 
+### Content
+- [FeaturePost](/Content/FeaturePost/) Custom feature post card and video post card built in SwiftUI.
+
 ### Grids
 - [MonthlyHeatMap](/Grids/MonthlyHeatMap/) Custom view for a showing a trend heat map that uses SwiftUI Grid to show the trend over the month.
 
