@@ -1,6 +1,6 @@
 ## FeaturePost
 
-Custom feature post card and video post card built in SwiftUI. 
+Custom feature post card and video post card built in SwiftUI.   
 **I copied the design for the FeatureView and VideoPost from Apple's Developer app.**
 
 <picture>

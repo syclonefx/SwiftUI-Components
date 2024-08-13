@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
-  @State private var name = "Chuck"
+  @State private var name = "syclonefx"
   @State private var value = ""
   @State private var oneLineComment = "No Comment"
   @State private var twoLineComment = "No Comment"
@@ -18,7 +18,6 @@ struct ContentView: View {
   
   var body: some View {
     Form {
-      
       FloatingTextField(title: "Name", text: $name)
       FloatingNumericTextField(title: "Amount", value: $value)
       FloatingTextField(title: "One Line Comment", text: $oneLineComment)
@@ -27,6 +26,7 @@ struct ContentView: View {
       FloatingTextField(title: "Four Line Comment", text: $fourLineComment)
       FloatingTextField(title: "Five Line Comment", text: $fiveLineComment)
     }
+    .formStyle(.columns)
     .padding()
     .onAppear(perform: {
       populateComment()

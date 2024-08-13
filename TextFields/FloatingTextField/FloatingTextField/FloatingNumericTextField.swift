@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct FloatingNumericTextField: View {
-//  @State var textFieldOffset: Double = .zero
   let title: String
   let value: Binding<String>
   let text = ""
@@ -21,7 +20,6 @@ struct FloatingNumericTextField: View {
         .offset(y: value.wrappedValue.isEmpty ? 0 : -25)
         .scaleEffect(value.wrappedValue.isEmpty ? 1 : 0.75, anchor: .leading)
       TextField("", text: value)
-//        .textFieldStyle(RoundedBorderTextFieldStyle())
         .keyboardType(.decimalPad)
     }
     .padding(.top, 15)
