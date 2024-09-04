@@ -20,8 +20,11 @@ A collection of various views and components I made with SwiftUI. I thought thes
 ### Pickers
 - [DateTimeProductPicker](/Pickers/DateTimeProductPicker/) Date, time and product selection view made in SwiftUI. Showcasing animation when selecting between the various pickers and products. 
 
+### Profiles
+- [SocialMediaProfile](/Profiles/SocialMediaProfile/) Basic profile view with social media icons for SwiftUI
+
 ### TextFields
 - [FloatingTextField](/TextFields/FloatingTextField/) **(Work in Progress)** Custom SwiftUI TextField where place holder pops out of the text field and site about the textfield whe text is entered in to the textfield. This textfield also supports multiple lines of text.
 
-### User Profiles
-- [SocialMediaProfile](/Profiles/SocialMediaProfile/) Basic profile view with social media icons for SwiftUI
+### Toggles
+- [CustomToggles](/Toggle/CustomToggles/) A sample project for a custom ToggleStyle for SwiftUI   
