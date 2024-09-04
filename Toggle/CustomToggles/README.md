@@ -8,6 +8,7 @@ A sample project for a custom ToggleStyle for SwiftUI
 <picture>
 <img src="custom_toggle_active_light.jpg" height="500px">
 </picture>
+
 <picture>
 <img src="custom_toggle_non-active_dark.jpg" height="500px">
 </picture>
