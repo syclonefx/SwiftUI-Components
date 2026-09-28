@@ -13,7 +13,7 @@ iOS: 18.0
 - [SwiftUIFonts](/Fonts/SwiftUIFonts/) A little app I made to test the various font sizes and font weights for SwiftUI
 
 ### Grids
-- [BentoLayout](/Grids/BentoLayout/) **(Work in Progress)** - My attempt to mimic Apple's Journal app Bento Layout view when adding new journal items. 
+- [BentoLayout](/Grids/BentoLayout/) My attempt to mimic Apple's Journal app Bento Layout view when adding new journal items. 
 - [MonthlyHeatMap](/Grids/MonthlyHeatMap/) Custom view for a showing a trend heat map that uses SwiftUI Grid to show the trend over the month.
 
 ### HealthKit
