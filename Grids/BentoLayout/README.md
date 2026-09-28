@@ -4,6 +4,13 @@ My attempt to mimic Apple's Journal app Bento Layout view when adding new journa
 
 iOS: 18.0
 
+<picture>
+<img src="screenshot-light.png" height="500px">
+</picture>
+<picture>
+<img src="screenshot-dark.png" height="500px">
+</picture>
+
 ### Useage
 ```swift
 BentoLayout {
