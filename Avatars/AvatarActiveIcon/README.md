@@ -2,6 +2,8 @@
 
 Customizable avatar profile image with customizable activity indicator made with SwiftUI
 
+iOS: 18.0
+
 <picture>
 <img src="screenshot-light.jpg" height="500px">
 </picture>
@@ -9,7 +11,7 @@ Customizable avatar profile image with customizable activity indicator made with
 <img src="screenshot-dark.jpg" height="500px">
 </picture>
 
-#### Customization
+### Customization
 - Avatar size
 - Avatar background color
 - Show or hide activity indicator
