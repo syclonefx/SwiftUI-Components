@@ -18,7 +18,7 @@ Dark mode
 </picture>
 
 
-#### Customization
+### Customization
 - onImage: String (SFSymbol) 
 - offImage: String (SFSymbol)
 - onColor: Color
