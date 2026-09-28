@@ -36,6 +36,9 @@ struct ContentView: View {
             .scaledToFill()
         }
       }
+
+      Spacer()
+
       BentoLayout(spacing: 8) {
         ForEach(0..<itemCount, id: \.self) { index in
           BentoTile {
