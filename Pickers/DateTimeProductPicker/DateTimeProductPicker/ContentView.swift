@@ -11,7 +11,6 @@ import SwiftUI
 
 struct ContentView: View {
   @Environment(\.colorScheme) var colorScheme
-//  @Namespace private var animation
     
   @State private var selectedDate: Date = Date()
   @State private var selectedProduct = Product.products()[0]
