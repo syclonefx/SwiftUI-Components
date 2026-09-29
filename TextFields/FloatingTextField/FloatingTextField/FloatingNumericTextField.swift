@@ -9,24 +9,37 @@ import SwiftUI
 
 struct FloatingNumericTextField: View {
   let title: String
-  let value: Binding<String>
-  let text = ""
-  var keyboard = UIKeyboardType.default
-  
+  @Binding var value: Double?
+
+  @FocusState private var isFocused: Bool
+
+  private var shouldFloatLabel: Bool {
+    isFocused || value != nil
+  }
+
   var body: some View {
     ZStack(alignment: .leading) {
       Text(title)
-        .foregroundStyle(value.wrappedValue.isEmpty ?  Color(.gray) : .primary)
-        .offset(y: value.wrappedValue.isEmpty ? 0 : -25)
-        .scaleEffect(value.wrappedValue.isEmpty ? 1 : 0.75, anchor: .leading)
-      TextField("", text: value)
+        .foregroundStyle(shouldFloatLabel ? Color.primary : Color.gray)
+        .offset(y: shouldFloatLabel ? -25 : 0)
+        .scaleEffect(
+          shouldFloatLabel ? 0.75 : 1,
+          anchor: .leading
+        )
+        .allowsHitTesting(false)
+
+      TextField("", value: $value, format: .number)
         .keyboardType(.decimalPad)
+        .focused($isFocused)
     }
     .padding(.top, 15)
-    .animation(.spring(response: 0.4, dampingFraction: 0.3), value: UUID())
+    .animation(
+      .spring(response: 0.4, dampingFraction: 0.7),
+      value: shouldFloatLabel
+    )
   }
 }
 
 #Preview {
-  FloatingNumericTextField(title: "Amount", value: .constant(""))
+  FloatingNumericTextField(title: "Amount", value: .constant(23))
 }

@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
   @State private var name = "syclonefx"
-  @State private var value = ""
+  @State private var value: Double? = 0.0
   @State private var oneLineComment = "No Comment"
   @State private var twoLineComment = "No Comment"
   @State private var threeLineComment = "No Comment"
@@ -45,9 +45,3 @@ struct ContentView: View {
 #Preview {
   ContentView()
 }
-
-/*
- Used for detecting size of the text filed
- https://www.youtube.com/watch?v=H6S5xKgb9k8
- https://github.com/mikina/GetViewSizeInSwiftUI/blob/main/GeometryReader/ContentView.swift
-*/
