@@ -10,7 +10,7 @@
 import SwiftUI
 
 struct BiomarkerView: View {
-  @State private var readingCount: Double = 1
+  @State private var readingCount: Double = 0
   var minReading: Double = 0
   var maxReading: Double = 3
   var baseColor: Color = .gray.opacity(0.5)
@@ -38,13 +38,11 @@ struct BiomarkerView: View {
             .foregroundStyle(progressColor)
           ZStack {
             Image(systemName: icon)
-              .resizable()
-              .scaledToFit()
-              .foregroundStyle(.red)
-            Image(systemName: "\(icon).fill")
-              .resizable()
-              .scaledToFit()
+              .symbolVariant(.fill)
               .foregroundStyle(progressColor.opacity(0.5))
+
+            Image(systemName: icon)
+              .foregroundStyle(progressColor)
           }
           .frame(height: 20)
         }
@@ -65,7 +63,15 @@ struct BiomarkerView: View {
     }
   }
   
-  init(readingCount: Double, minReading: Double, maxReading: Double, baseColor: Color, progressColor: Color, icon: String, readingType: String) {
+  init(
+    readingCount: Double,
+    minReading: Double,
+    maxReading: Double,
+    baseColor: Color,
+    progressColor: Color,
+    icon: String,
+    readingType: String
+  ) {
     _readingCount = State(initialValue: readingCount)
     self.minReading = minReading
     self.maxReading = maxReading

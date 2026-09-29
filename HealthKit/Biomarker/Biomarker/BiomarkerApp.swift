@@ -11,9 +11,9 @@ import SwiftUI
 
 @main
 struct BiomarkerApp: App {
-    var body: some Scene {
-        WindowGroup {
-            ContentView()
-        }
+  var body: some Scene {
+    WindowGroup {
+      ContentView()
     }
+  }
 }
