@@ -17,6 +17,9 @@ notes.md
 todo.md
 *.webloc
 
+## Testing Components
+WebKit/
+
 ## User settings
 xcuserdata/
 

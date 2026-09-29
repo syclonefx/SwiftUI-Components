@@ -1,7 +1,7 @@
 ## SwiftUI Components
 A collection of various views and components I made with SwiftUI. I thought these might be useful to others so I'm posting them for anyone to use. 
 
-iOS: 18.0
+iOS: 18.0 - 26.0
 
 ### Avatars
 - [AvatarActiveIcon](/Avatars/AvatarActiveIcon/) Customizable avatar profile image with customizable activity indicator made with SwiftUI
