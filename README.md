@@ -32,4 +32,4 @@ iOS: 18.0 - 26.0
 - [CustomToggles](/Toggle/CustomToggles/) A sample project for a custom ToggleStyle for SwiftUI   
 
 ### WebKit
-- [WebBrowser](/WebKit/WebBrowser/) A sample project using the new WebKit for iOS 26.
+- [WebBrowser](/WebKit/WebBrowser/) A sample project using the new SwiftUI WebKit framework for iOS 26.
