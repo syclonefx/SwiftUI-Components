@@ -13,50 +13,43 @@ import WebKit
 struct ContentView: View {
   @FocusState private var isAddressFocused: Bool
 
-  @State private var webPage = WebPage()
-  @State private var address = "https://apple.com"
+  @State private var browserManager: BrowserManager
 
-  @State private var canGoBack = false
-  @State private var canGoForward = false
+  init() {
+    _browserManager = State(initialValue: BrowserManager())
+  }
 
   var body: some View {
+    @Bindable var browserManager = browserManager
+    
     NavigationStack {
+      // added to push the web content below the navigation bar
       Color.clear
         .frame(height: 0)
-      WebView(webPage)
-        .onAppear{
-          webPage.load(URL(string: address))
-        }
-        .onChange(of: webPage.url) { _, newURL in
-          updateNavigationState()
+      BrowserView()
+        .navigationTitle(browserManager.webPage.title)
+        .environment(browserManager)
+        .onChange(of: browserManager.webPage.url) { _, newURL in
+          browserManager.updateNavigationState()
           guard !isAddressFocused, let newURL else { return }
-          address = newURL.absoluteString
-        }
-        .onChange(of: webPage.isLoading) {
-          updateNavigationState()
-        }
-        .safeAreaInset(edge: .top) {
-          if webPage.isLoading {
-            ProgressView(value: webPage.estimatedProgress)
-              .progressViewStyle(.linear)
-          }
+          browserManager.address = newURL.absoluteString
         }
         .toolbar {
           ToolbarItemGroup(placement: .topBarLeading) {
-            Button("Back", systemImage: "chevron.backward", action: goBack)
-              .disabled(!canGoBack)
+            Button("Back", systemImage: "chevron.backward", action: browserManager.goBack)
+              .disabled(!browserManager.canGoBack)
 
-            if canGoForward {
-              Button("Forward", systemImage: "chevron.forward", action: goForward)
+            if browserManager.canGoForward {
+              Button("Forward", systemImage: "chevron.forward", action: browserManager.goForward)
             }
           }
 
           ToolbarItem(placement: .principal) {
-            TextField("Address", text: $address)
+            TextField("Address", text: $browserManager.address)
               .focused($isAddressFocused)
               .textCase(.lowercase)
               .onSubmit {
-                var submittedAddress = address.trimmingCharacters(
+                var submittedAddress = browserManager.address.trimmingCharacters(
                   in: .whitespacesAndNewlines
                 )
 
@@ -70,36 +63,16 @@ struct ContentView: View {
                   return
                 }
 
-                address = submittedAddress
-                webPage.load(url)
+                browserManager.address = submittedAddress
+                browserManager.webPage.load(url)
                 isAddressFocused = false
               }
           }
           ToolbarItemGroup(placement: .topBarTrailing) {
-            Button("Refresh", systemImage: "arrow.clockwise", action: refresh)
+            Button("Refresh", systemImage: "arrow.clockwise", action: browserManager.refresh)
           }
         }
     }
-  }
-
-  func goBack() {
-    guard let page = webPage.backForwardList.backList.last else { return }
-    webPage.load(page)
-  }
-
-  func goForward() {
-    guard let page = webPage.backForwardList.forwardList.first else { return }
-    webPage.load(page)
-  }
-
-  func refresh() {
-    webPage.reload()
-  }
-
-  func updateNavigationState() {
-    let list = webPage.backForwardList
-    canGoBack = !list.backList.isEmpty
-    canGoForward = !list.forwardList.isEmpty
   }
 }
 
