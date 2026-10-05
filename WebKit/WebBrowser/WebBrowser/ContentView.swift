@@ -14,20 +14,21 @@ struct ContentView: View {
   @FocusState private var isAddressFocused: Bool
 
   @State private var browserManager: BrowserManager
-  @State private var webPage: WebPage
 
   init() {
-    let webPage = WebPage()
-    _webPage = State(initialValue: webPage)
-    _browserManager = State(initialValue: BrowserManager(page: webPage))
+    _browserManager = State(initialValue: BrowserManager())
   }
 
   var body: some View {
+    @Bindable var browserManager = browserManager
+    
     NavigationStack {
+      // added to push the web content below the navigation bar
       Color.clear
         .frame(height: 0)
       BrowserView()
         .navigationTitle(browserManager.webPage.title)
+        .environment(browserManager)
         .onChange(of: browserManager.webPage.url) { _, newURL in
           browserManager.updateNavigationState()
           guard !isAddressFocused, let newURL else { return }
@@ -71,9 +72,7 @@ struct ContentView: View {
             Button("Refresh", systemImage: "arrow.clockwise", action: browserManager.refresh)
           }
         }
-
     }
-
   }
 }
 

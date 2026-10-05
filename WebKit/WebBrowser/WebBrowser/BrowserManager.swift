@@ -18,8 +18,8 @@ class BrowserManager {
   var canGoBack = false
   var canGoForward = false
 
-  init(page: WebPage) {
-    self.webPage = page
+  init() {
+    self.webPage = WebPage()
   }
 
   func goBack() {
@@ -32,6 +32,10 @@ class BrowserManager {
     webPage.load(page)
   }
 
+  func openURL(_ url: URL) {
+    webPage.load(url)
+  }
+  
   func refresh() {
     webPage.reload()
   }

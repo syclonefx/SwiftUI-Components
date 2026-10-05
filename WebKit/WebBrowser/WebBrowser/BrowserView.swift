@@ -11,16 +11,21 @@ import SwiftUI
 import WebKit
 
 struct BrowserView: View {
-  @State private var browserManager: BrowserManager
-  @State private var webPage: WebPage
-
-  init() {
-    let webPage = WebPage()
-    _webPage = State(initialValue: webPage)
-    _browserManager = State(initialValue: BrowserManager(page: webPage))
-  }
+  @Environment(BrowserManager.self) var browserManager
+  @Environment(\.openURL) private var openURL
+  
+//  @State private var browserManager: BrowserManager
+//  @State private var webPage: WebPage
+//
+//  init() {
+//    let webPage = WebPage()
+//    _webPage = State(initialValue: webPage)
+//    _browserManager = State(initialValue: BrowserManager(page: webPage))
+//  }
   
   var body: some View {
+    @Bindable var browserManger = browserManager
+
     WebView(browserManager.webPage)
       .scrollBounceBehavior(.basedOnSize, axes: [.vertical, .horizontal])
       .webViewLinkPreviews(.enabled)
