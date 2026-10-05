@@ -11,9 +11,11 @@ import SwiftUI
 
 @main
 struct WebBrowserApp: App {
+  @FocusedValue(BrowserManager.self) var browserManager
   var body: some Scene {
     WindowGroup {
       ContentView()
+        .environment(browserManager)
     }
   }
 }
